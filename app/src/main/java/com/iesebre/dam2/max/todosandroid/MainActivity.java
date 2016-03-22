@@ -4,12 +4,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -18,7 +16,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.RadioGroup;
 
 import com.afollestad.materialdialogs.DialogAction;
@@ -377,13 +374,17 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private void setTasksView()
     {
         // Initialize ListView
-        ListView todoListView = (ListView) findViewById(R.id.todoListView);
-        // Initialitze ListView adapter
-        adapter = new TodoListAdapter(this, R.layout.list_item, tasks);
-        todoListView.setAdapter(adapter);
+        RecyclerView todoRecyclerView = (RecyclerView) findViewById(R.id.rvTodoItems);
+
+        todoRecyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        todoRecyclerView.setLayoutManager(linearLayoutManager);
+
+        // Initialitze RecyclerView adapter
+        adapter = new TodoListAdapter(this, tasks);
+        todoRecyclerView.setAdapter(adapter);
         // Hide/Show the remove FloatingActionButton
         hideRemoveFabButton();
-
     }
 
     /**

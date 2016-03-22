@@ -4,98 +4,71 @@ import android.app.Activity;
 import android.graphics.Paint;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.hanks.library.AnimateCheckBox;
 import com.iesebre.dam2.max.todosandroid.MainActivity;
 import com.iesebre.dam2.max.todosandroid.R;
 import com.iesebre.dam2.max.todosandroid.models.TodoItem;
+import com.iesebre.dam2.max.todosandroid.models.holders.TodoItemHolder;
 
 import java.util.ArrayList;
 
 /**
- * Created by max on 20/11/15.
- *
+ * Created by max on 22/03/16.
  */
-public class TodoListAdapter extends BaseAdapter {
+public class TodoListAdapter extends RecyclerView.Adapter<TodoItemHolder> {
 
     private Activity activity;
-    private int resource;
-    private ArrayList<TodoItem> list;
+    private ArrayList<TodoItem> todoItems;
 
-    public TodoListAdapter(Activity activity, int resource, ArrayList<TodoItem> listData)
-    {
+    public TodoListAdapter(Activity activity, ArrayList<TodoItem> todoItems) {
         this.activity = activity;
-        this.resource = resource;
-        this.list = listData;
+        this.todoItems = todoItems;
     }
 
     @Override
-    public int getCount() {
-        return list.size();
+    public TodoItemHolder onCreateViewHolder(ViewGroup parent, int viewType)
+    {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_todo, parent, false);
+        return new TodoItemHolder(view);
     }
 
     @Override
-    public Object getItem(int position) {
-        return list.get(position);
-    }
+    public void onBindViewHolder(final TodoItemHolder holder, final int position) {
 
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
+        TodoItem item = todoItems.get(position);
 
-    @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+        holder.tvTaskName.setText(item.getName());
+        setPriorityColor(holder.cbCompletedTask, item.getPriority());
 
-        // TODO, this is not the best solution...
-        convertView = null;
+        holder.cbCompletedTask.setChecked(item.isDone());
+        strikethroughName(holder.tvTaskName, item.isDone());
 
-        final TodoItem item = list.get(position);
+        holder.cbCompletedTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        if (convertView == null)
-        {
-            convertView = activity.getLayoutInflater().inflate(resource, null);
+                if (!holder.cbCompletedTask.isChecked()) {
+                    holder.cbCompletedTask.setChecked(true);
+                    strikethroughName(holder.tvTaskName, true);
+                    todoItems.get(position).setDone(true);
+                } else {
+                    holder.cbCompletedTask.setChecked(false);
+                    strikethroughName(holder.tvTaskName, false);
+                    todoItems.get(position).setDone(false);
+                }
 
-            if (item != null)
-            {
-                final TextView tv1 = (TextView) convertView.findViewById(R.id.tvTaskName);
-                tv1.setText(item.getName());
-
-                final AnimateCheckBox cbCompletedTask = (AnimateCheckBox) convertView.findViewById(R.id.cbCompletedTask);
-                setPriorityColor(cbCompletedTask, item.getPriority());
-
-                cbCompletedTask.setChecked(item.isDone());
-                strikethroughName(tv1, item.isDone());
-
-                cbCompletedTask.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        if (!cbCompletedTask.isChecked())
-                        {
-                            cbCompletedTask.setChecked(true);
-                            strikethroughName(tv1, true);
-                            list.get(position).setDone(true);
-                        }
-                        else
-                        {
-                            cbCompletedTask.setChecked(false);
-                            strikethroughName(tv1, false);
-                            list.get(position).setDone(false);
-                        }
-
-                        checkDoneTasks();
-                    }
-                });
+                checkDoneTasks();
             }
-        }
+        });
 
         // Item click event listener
-        convertView.setOnClickListener(new View.OnClickListener() {
+        holder.llTodoItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -105,8 +78,11 @@ public class TodoListAdapter extends BaseAdapter {
                 mainActivity.displayTaskDialog(activity.getString(R.string.edit_task_dialog_title), position);
             }
         });
+    }
 
-        return convertView;
+    @Override
+    public int getItemCount() {
+        return todoItems.size();
     }
 
     /**
@@ -155,14 +131,14 @@ public class TodoListAdapter extends BaseAdapter {
     {
         FloatingActionButton fabRemove = (FloatingActionButton) activity.findViewById(R.id.fabRemove);
 
-        for (int i=0; i<list.size(); i++)
+        for (int i=0; i<todoItems.size(); i++)
         {
-            if (list.get(i).isDone())
+            if (todoItems.get(i).isDone())
             {
                 fabRemove.show();
                 return;
             }
-            if (i == list.size() - 1) { fabRemove.hide(); }
+            if (i == todoItems.size() - 1) { fabRemove.hide(); }
         }
     }
 }
