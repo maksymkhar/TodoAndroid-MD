@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <com.hanks.library.AnimateCheckBox
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/cbCompletedTask"
+        android:padding="5dp"
+        app:animDuration="200"
+        app:checkedColor="#00f"
+        app:lineColor="#fff"
+        app:lineWidth="1.2dp"
+        app:unCheckColor="#ff0"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name"
+        android:id="@+id/tvTaskName"
+        android:layout_margin="5dp" />
+
+</LinearLayout>
