@@ -5,6 +5,7 @@ import android.graphics.Paint;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import com.iesebre.dam2.max.todosandroid.MainActivity;
 import com.iesebre.dam2.max.todosandroid.R;
 import com.iesebre.dam2.max.todosandroid.models.TodoItem;
 import com.iesebre.dam2.max.todosandroid.models.holders.TodoItemHolder;
+import com.iesebre.dam2.max.todosandroid.utils.Utils;
 
 import java.util.ArrayList;
 
@@ -67,17 +69,34 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoItemHolder> {
             }
         });
 
+        // Initialize MainActivity
+        final MainActivity mainActivity = (MainActivity) activity;
+
         // Item click event listener
         holder.llTodoItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                // Initialize MainActivity
-                MainActivity mainActivity = (MainActivity) activity;
-                // Call edit task.
-                mainActivity.displayTaskDialog(activity.getString(R.string.edit_task_dialog_title), position);
+                // TODO: Open task
+                mainActivity.openTask(position);
             }
         });
+
+
+        holder.llTodoItem.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+
+                // Call edit task.
+                mainActivity.displayTaskDialog(activity.getString(R.string.edit_task_dialog_title), position);
+                // Short vibration
+                Utils.vibrate(activity, 1000);
+
+                return true;
+            }
+        });
+
     }
 
     @Override

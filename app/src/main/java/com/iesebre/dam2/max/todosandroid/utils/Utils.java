@@ -1,5 +1,6 @@
 package com.iesebre.dam2.max.todosandroid.utils;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -7,6 +8,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -56,6 +58,12 @@ public class Utils {
                 .content(message)
                 .positiveText(context.getString(R.string.ok).toUpperCase())
                 .show();
+    }
+
+    public static void vibrate(Context context, int duration)
+    {
+        Vibrator vb = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+        vb.vibrate(duration);
     }
 
 }

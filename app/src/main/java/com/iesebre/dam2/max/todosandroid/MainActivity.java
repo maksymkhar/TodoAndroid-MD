@@ -1,5 +1,6 @@
 package com.iesebre.dam2.max.todosandroid;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -25,6 +26,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.reflect.TypeToken;
 import com.iesebre.dam2.max.todosandroid.adapters.TodoListAdapter;
+import com.iesebre.dam2.max.todosandroid.fragments.TaskDetailFragment;
 import com.iesebre.dam2.max.todosandroid.models.TodoItem;
 import com.iesebre.dam2.max.todosandroid.utils.Constants;
 import com.iesebre.dam2.max.todosandroid.utils.Utils;
@@ -412,5 +414,23 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
             loadTasksFromPreferences();
         }
+    }
+
+    public void openTask(int position)
+    {
+        if(findViewById(R.id.task_detail) == null)
+        {
+            Intent intent = new Intent(this, TaskDetailActivity.class);
+            startActivity(intent);
+        }
+        else
+        {
+            TaskDetailFragment taskDetailFragment = new TaskDetailFragment();
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.task_detail, taskDetailFragment)
+                    .commit();
+        }
+
+
     }
 }
