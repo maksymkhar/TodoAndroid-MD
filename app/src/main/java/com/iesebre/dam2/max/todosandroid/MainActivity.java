@@ -260,8 +260,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
      */
     private void inflateDialogValues(MaterialDialog dialog, int taskId)
     {
-        EditText etName = (EditText) dialog.findViewById(R.id.etName);
-        etName.setText(tasks.get(taskId).getName());
+        EditText taskEditText = (EditText) dialog.findViewById(R.id.etName);
+        taskEditText.setText(tasks.get(taskId).getName());
+
+        taskEditText = (EditText) dialog.findViewById(R.id.etDescription);
+        taskEditText.setText(tasks.get(taskId).getDescription());
 
         RadioGroup rgPriority = (RadioGroup) dialog.findViewById(R.id.rgPriority);
         switch (tasks.get(taskId).getPriority())

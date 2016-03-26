@@ -53,7 +53,13 @@ public class TaskDetailFragment extends Fragment {
         if (todoItem == null) { return; }
 
         tvTaskName.setText(todoItem.getName());
-        tvTaskDescription.setText(todoItem.getDescription());
+
+        if (todoItem.getDescription() == null || todoItem.getDescription().trim().length() == 0) {
+            tvTaskDescription.setText("-");
+        }
+        else {
+            tvTaskDescription.setText(todoItem.getDescription());
+        }
 
         if (todoItem.isDone()) { tvTaskDone.setText(getString(R.string.affirmative)); }
         else { tvTaskDone.setText(getString(R.string.negative)); }

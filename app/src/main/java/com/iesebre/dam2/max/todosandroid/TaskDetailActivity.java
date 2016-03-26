@@ -52,7 +52,13 @@ public class TaskDetailActivity extends AppCompatActivity {
         if (todoItem == null) { return; }
 
         tvTaskName.setText(todoItem.getName());
-        tvTaskDescription.setText(todoItem.getDescription());
+
+        if (todoItem.getDescription() == null || todoItem.getDescription().trim().length() == 0) {
+            tvTaskDescription.setText("-");
+        }
+        else {
+            tvTaskDescription.setText(todoItem.getDescription());
+        }
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(todoItem.getName());

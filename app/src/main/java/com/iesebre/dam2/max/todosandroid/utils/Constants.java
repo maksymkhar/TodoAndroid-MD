@@ -24,8 +24,8 @@ public class Constants {
         TODO: API
      */
 
-    public static final String URL_BASE         = "http://acacha.github.io";
-    public static final String URL_ALL_TASKS    = URL_BASE + "/json-server-todos/db_todos.json";
+    public static final String URL_BASE         = "https://raw.githubusercontent.com";
+    public static final String URL_ALL_TASKS    = URL_BASE + "/maksymkhar/TodoAndroid-MD/master/test-tasks.json";
 
     public static final String KEY_TASK = "KEY_TASK";
 
