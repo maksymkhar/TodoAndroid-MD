@@ -2,9 +2,6 @@ package com.iesebre.dam2.max.todosandroid.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,7 +53,6 @@ public class TaskDetailFragment extends Fragment {
         if (todoItem == null) { return; }
 
         tvTaskName.setText(todoItem.getName());
-
 
         if (todoItem.isDone()) { tvTaskDone.setText(getString(R.string.affirmative)); }
         else { tvTaskDone.setText(getString(R.string.negative)); }

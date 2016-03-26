@@ -13,7 +13,8 @@
         android:id="@+id/textView3"
         android:textColor="@color/colorAccent"
         android:layout_marginTop="12dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="16sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,7 +22,8 @@
         android:text="Lorem Ipsum"
         android:id="@+id/tvTaskName"
         android:layout_marginTop="6dp"
-        android:layout_marginBottom="6dp" />
+        android:layout_marginBottom="6dp"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,7 +32,8 @@
         android:id="@+id/textView5"
         android:textColor="@color/colorAccent"
         android:layout_marginTop="12dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="16sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -38,7 +41,8 @@
         android:text="Lorem Ipsum"
         android:id="@+id/tvTaskDescription"
         android:layout_marginTop="6dp"
-        android:layout_marginBottom="6dp" />
+        android:layout_marginBottom="6dp"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,7 +51,8 @@
         android:id="@+id/textView7"
         android:textColor="@color/colorAccent"
         android:layout_marginTop="12dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="16sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,7 +60,8 @@
         android:text="Yes"
         android:id="@+id/tvTaskDone"
         android:layout_marginTop="6dp"
-        android:layout_marginBottom="6dp" />
+        android:layout_marginBottom="6dp"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,7 +70,8 @@
         android:id="@+id/textView9"
         android:textColor="@color/colorAccent"
         android:layout_marginTop="12dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="16sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,5 +79,6 @@
         android:text="Hight!"
         android:id="@+id/tvTaskPriority"
         android:layout_marginTop="6dp"
-        android:layout_marginBottom="6dp" />
+        android:layout_marginBottom="6dp"
+        android:textSize="18sp" />
 </LinearLayout>
