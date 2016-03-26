@@ -421,16 +421,20 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         if(findViewById(R.id.task_detail) == null)
         {
             Intent intent = new Intent(this, TaskDetailActivity.class);
+            intent.putExtra(Constants.KEY_TASK, tasks.get(position));
             startActivity(intent);
         }
         else
         {
+            Bundle bundle = new Bundle();
+            bundle.putSerializable(Constants.KEY_TASK, tasks.get(position));
+
             TaskDetailFragment taskDetailFragment = new TaskDetailFragment();
+            taskDetailFragment.setArguments(bundle);
+
             getFragmentManager().beginTransaction()
                     .replace(R.id.task_detail, taskDetailFragment)
                     .commit();
         }
-
-
     }
 }

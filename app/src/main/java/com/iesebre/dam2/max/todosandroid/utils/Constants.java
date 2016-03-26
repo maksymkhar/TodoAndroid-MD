@@ -27,4 +27,6 @@ public class Constants {
     public static final String URL_BASE         = "http://acacha.github.io";
     public static final String URL_ALL_TASKS    = URL_BASE + "/json-server-todos/db_todos.json";
 
+    public static final String KEY_TASK = "KEY_TASK";
+
 }

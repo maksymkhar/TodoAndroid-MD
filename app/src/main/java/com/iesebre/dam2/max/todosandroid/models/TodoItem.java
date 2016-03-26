@@ -2,10 +2,12 @@ package com.iesebre.dam2.max.todosandroid.models;
 
 import com.google.gson.Gson;
 
+import java.io.Serializable;
+
 /**
  * Created by max on 13/11/15.
  */
-public class TodoItem {
+public class TodoItem implements Serializable{
 
     private String name;
     private boolean done;

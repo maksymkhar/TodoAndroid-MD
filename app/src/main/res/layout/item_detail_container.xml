@@ -1,13 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="DETAIL"
+        android:text="Name:"
         android:id="@+id/textView3"
-        android:layout_gravity="center_horizontal" />
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lorem Ipsum"
+        android:id="@+id/tvTaskName"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:id="@+id/textView5"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lorem Ipsum"
+        android:id="@+id/tvTaskDescription"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done:"
+        android:id="@+id/textView7"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:id="@+id/tvTaskDone"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Priority:"
+        android:id="@+id/textView9"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hight!"
+        android:id="@+id/tvTaskPriority"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp" />
 </LinearLayout>

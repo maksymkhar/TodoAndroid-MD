@@ -26,5 +26,11 @@
 
     <string name="ok">Ok</string>
 
+    <string name="affirmative">Yes</string>
+    <string name="negative">No</string>
+
+    <string name="low">Low</string>
+    <string name="medium">Medium</string>
+    <string name="hight">Hight</string>
 
 </resources>
