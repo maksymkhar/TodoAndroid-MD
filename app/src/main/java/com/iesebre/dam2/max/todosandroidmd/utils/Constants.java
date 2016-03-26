@@ -1,4 +1,4 @@
-package com.iesebre.dam2.max.todosandroid.utils;
+package com.iesebre.dam2.max.todosandroidmd.utils;
 
 /**
  * Created by max on 4/12/15.

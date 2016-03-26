@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.iesebre.dam2.max.todosandroid"
+        applicationId "com.iesebre.dam2.max.todosandroidmd"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1

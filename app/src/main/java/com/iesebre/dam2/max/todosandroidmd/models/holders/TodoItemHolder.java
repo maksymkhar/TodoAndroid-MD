@@ -1,4 +1,4 @@
-package com.iesebre.dam2.max.todosandroid.models.holders;
+package com.iesebre.dam2.max.todosandroidmd.models.holders;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hanks.library.AnimateCheckBox;
-import com.iesebre.dam2.max.todosandroid.R;
+import com.iesebre.dam2.max.todosandroidmd.R;
 
 /**
  * Created by max on 22/03/16.

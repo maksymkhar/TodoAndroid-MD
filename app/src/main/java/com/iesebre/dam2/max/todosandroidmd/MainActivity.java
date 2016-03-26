@@ -1,4 +1,4 @@
-package com.iesebre.dam2.max.todosandroid;
+package com.iesebre.dam2.max.todosandroidmd;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -25,11 +25,11 @@ import com.afollestad.materialdialogs.internal.MDButton;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.reflect.TypeToken;
-import com.iesebre.dam2.max.todosandroid.adapters.TodoListAdapter;
-import com.iesebre.dam2.max.todosandroid.fragments.TaskDetailFragment;
-import com.iesebre.dam2.max.todosandroid.models.TodoItem;
-import com.iesebre.dam2.max.todosandroid.utils.Constants;
-import com.iesebre.dam2.max.todosandroid.utils.Utils;
+import com.iesebre.dam2.max.todosandroidmd.adapters.TodoListAdapter;
+import com.iesebre.dam2.max.todosandroidmd.fragments.TaskDetailFragment;
+import com.iesebre.dam2.max.todosandroidmd.models.TodoItem;
+import com.iesebre.dam2.max.todosandroidmd.utils.Constants;
+import com.iesebre.dam2.max.todosandroidmd.utils.Utils;
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
 

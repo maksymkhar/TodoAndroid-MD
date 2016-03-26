@@ -1,6 +1,6 @@
-package com.iesebre.dam2.max.todosandroid;
+package com.iesebre.dam2.max.todosandroidmd;
 
-import com.iesebre.dam2.max.todosandroid.models.TodoItem;
+import com.iesebre.dam2.max.todosandroidmd.models.TodoItem;
 
 import java.util.ArrayList;
 

@@ -1,22 +1,13 @@
-package com.iesebre.dam2.max.todosandroid.utils;
+package com.iesebre.dam2.max.todosandroidmd.utils;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
 import android.os.Vibrator;
-import android.support.annotation.NonNull;
-import android.widget.EditText;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.iesebre.dam2.max.todosandroid.R;
+import com.iesebre.dam2.max.todosandroidmd.R;
 
 /**
  * Created by max on 10/12/15.

@@ -1,4 +1,4 @@
-package com.iesebre.dam2.max.todosandroid;
+package com.iesebre.dam2.max.todosandroidmd;
 
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -8,8 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.iesebre.dam2.max.todosandroid.models.TodoItem;
-import com.iesebre.dam2.max.todosandroid.utils.Constants;
+import com.iesebre.dam2.max.todosandroidmd.models.TodoItem;
+import com.iesebre.dam2.max.todosandroidmd.utils.Constants;
 
 /**
  * Created by max on 23/03/16.

@@ -1,22 +1,21 @@
-package com.iesebre.dam2.max.todosandroid.adapters;
+package com.iesebre.dam2.max.todosandroidmd.adapters;
 
 import android.app.Activity;
 import android.graphics.Paint;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.hanks.library.AnimateCheckBox;
-import com.iesebre.dam2.max.todosandroid.MainActivity;
-import com.iesebre.dam2.max.todosandroid.R;
-import com.iesebre.dam2.max.todosandroid.models.TodoItem;
-import com.iesebre.dam2.max.todosandroid.models.holders.TodoItemHolder;
-import com.iesebre.dam2.max.todosandroid.utils.Utils;
+import com.iesebre.dam2.max.todosandroidmd.MainActivity;
+import com.iesebre.dam2.max.todosandroidmd.R;
+import com.iesebre.dam2.max.todosandroidmd.models.TodoItem;
+import com.iesebre.dam2.max.todosandroidmd.models.holders.TodoItemHolder;
+import com.iesebre.dam2.max.todosandroidmd.utils.Utils;
 
 import java.util.ArrayList;
 

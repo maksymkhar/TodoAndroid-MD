@@ -1,4 +1,4 @@
-package com.iesebre.dam2.max.todosandroid;
+package com.iesebre.dam2.max.todosandroidmd;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

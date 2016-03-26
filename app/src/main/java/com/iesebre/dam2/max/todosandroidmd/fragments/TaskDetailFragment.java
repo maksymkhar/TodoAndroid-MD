@@ -1,4 +1,4 @@
-package com.iesebre.dam2.max.todosandroid.fragments;
+package com.iesebre.dam2.max.todosandroidmd.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.iesebre.dam2.max.todosandroid.R;
-import com.iesebre.dam2.max.todosandroid.models.TodoItem;
-import com.iesebre.dam2.max.todosandroid.utils.Constants;
+import com.iesebre.dam2.max.todosandroidmd.R;
+import com.iesebre.dam2.max.todosandroidmd.models.TodoItem;
+import com.iesebre.dam2.max.todosandroidmd.utils.Constants;
 
 /**
  * Created by max on 23/03/16.
