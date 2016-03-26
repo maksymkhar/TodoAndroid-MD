@@ -200,6 +200,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                         EditText etName = (EditText) dialog.findViewById(R.id.etName);
                         String taskName = etName.getText().toString();
 
+                        // Task description EditText
+                        EditText etDescription = (EditText) dialog.findViewById(R.id.etDescription);
+                        String taskDescription = etDescription.getText().toString();
+
                         // Task priority
                         RadioGroup rgPriority = (RadioGroup) dialog.findViewById(R.id.rgPriority);
 
@@ -216,8 +220,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                                 break;
                         }
 
-                        if (taskId < 0) { addTask(taskName, priority); }
-                        else { editTask(taskName, priority, taskId); }
+                        if (taskId < 0) { addTask(taskName, taskDescription, priority); }
+                        else { editTask(taskName, taskDescription, priority, taskId); }
                     }
                 })
                 .show();
@@ -282,10 +286,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
      * @param name The name of task.
      * @param priority The priority of task.
      */
-    private void addTask(String name, int priority)
+    private void addTask(String name, String description, int priority)
     {
         TodoItem todoItem = new TodoItem();
         todoItem.setName(name);
+        todoItem.setDescription(description);
         todoItem.setDone(false);
         todoItem.setPriority(priority);
 
@@ -301,9 +306,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
      * @param priority New task priority.
      * @param taskId Id of task to edit.
      */
-    private void editTask(String name, int priority, int taskId)
+    private void editTask(String name, String description, int priority, int taskId)
     {
         tasks.get(taskId).setName(name);
+        tasks.get(taskId).setDescription(description);
         tasks.get(taskId).setPriority(priority);
         adapter.notifyDataSetChanged();
 
@@ -367,7 +373,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                         Log.v("RESPONSE", tasks.toString());
                     }
                 });
-
     }
 
     /**

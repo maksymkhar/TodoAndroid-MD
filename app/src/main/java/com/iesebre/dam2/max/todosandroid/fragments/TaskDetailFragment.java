@@ -53,6 +53,7 @@ public class TaskDetailFragment extends Fragment {
         if (todoItem == null) { return; }
 
         tvTaskName.setText(todoItem.getName());
+        tvTaskDescription.setText(todoItem.getDescription());
 
         if (todoItem.isDone()) { tvTaskDone.setText(getString(R.string.affirmative)); }
         else { tvTaskDone.setText(getString(R.string.negative)); }

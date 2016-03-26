@@ -15,9 +15,9 @@ public class Constants {
         Default Json Strings.
      */
     public static final String INITIAL_TASKS_JSON = "[" +
-            "{\"name\":\"Comprar llet\", \"done\": true, \"priority\": 2}," +
-            "{\"name\":\"Comprar pa\", \"done\": false, \"priority\": 1},"  +
-            "{\"name\":\"Comprar ous\", \"done\": false, \"priority\": 3}"  +
+            "{\"name\":\"Comprar llet\",\"description\":\"Necessito comprar llet!\", \"done\": true, \"priority\": 2}," +
+            "{\"name\":\"Comprar pa\",\"description\":\"No tenim pa.. I m\'encanta el pa!!!\", \"done\": false, \"priority\": 1},"  +
+            "{\"name\":\"Comprar ous\",\"description\":\"Per a tirar-li a la casa d\'aquell professor..\", \"done\": false, \"priority\": 3}"  +
             "]";
 
     /*

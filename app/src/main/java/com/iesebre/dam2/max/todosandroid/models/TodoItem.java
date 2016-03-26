@@ -12,17 +12,20 @@ public class TodoItem implements Serializable{
     private String name;
     private boolean done;
     private int priority;
+    private String description;
 
     public TodoItem() {
-        this.name = "";
+        this.name = "-";
         this.done = false;
         this.priority = 1;
+        this.description = "-";
     }
 
-    public TodoItem(String name, boolean done, int priority) {
+    public TodoItem(String name, boolean done, int priority, String description) {
         this.name = name;
         this.done = done;
         this.priority = priority;
+        this.description = description;
     }
 
     public String getName() {
@@ -31,6 +34,14 @@ public class TodoItem implements Serializable{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public boolean isDone() {
@@ -51,7 +62,7 @@ public class TodoItem implements Serializable{
 
     @Override
     public String toString() {
-        return "{\"name\": " + name + ", \"done\": " + done + ", \"priority\": " + priority + "}";
+        return "{\"name\": " + name + ",\"description\": \"" + description + "\", \"done\": " + done + ", \"priority\": " + priority + "}";
     }
 
     public String serialize()

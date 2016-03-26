@@ -5,7 +5,6 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -53,6 +52,7 @@ public class TaskDetailActivity extends AppCompatActivity {
         if (todoItem == null) { return; }
 
         tvTaskName.setText(todoItem.getName());
+        tvTaskDescription.setText(todoItem.getDescription());
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(todoItem.getName());
