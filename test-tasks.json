@@ -1,0 +1,7 @@
+[
+{"name":"Comprar llet", "description":"Necessito comprar llet.", "done": true, "priority": 2},
+{"name":"Comprar pa", "description":"Necessito pa, m'encanta el pa!.", "done": true, "priority": 1},
+{"name":"Fer exercici", "done": false, "description":"Dema començo! (?)", "priority": 3},
+{"name":"Estudiar", "description":"Dema examen!", "done": false, "priority": 3}
+]
+
